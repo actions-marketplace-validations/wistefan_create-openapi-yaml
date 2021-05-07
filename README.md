@@ -25,7 +25,9 @@ The action will create the yaml-file inside github-workspace folder for further 
 
 ## Example usage
 
+```yaml
 uses: actions/create-openapi-yaml@v1
 with:
   model-name: 'ACMeasurement'
   repository-name: 'dataModel.Energy'
+```
