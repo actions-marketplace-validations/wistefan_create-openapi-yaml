@@ -13,6 +13,6 @@ COPY . .
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-CMD ["build-yaml.py"]
+CMD ["/usr/src/app/build-yaml.py"]
 
 ENTRYPOINT ["python3"]
