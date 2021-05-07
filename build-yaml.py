@@ -11,8 +11,8 @@ def read_yaml(fileUrl):
     return yaml.safe_load(file.read())
 
 
-modelYaml = os.environ['MODEL_FOLDER']+"/model.yaml"
-outputFile = os.environ['MODEL_FOLDER']+"/"+os.environ['OUTPUT_FILENAME']
+modelYaml = os.environ['MODEL_FOLDER'] + "/model.yaml"
+outputFile = os.environ['MODEL_FOLDER'] + "/" + os.environ['OUTPUT_FILENAME']
 
 dataModel = os.environ['DATA_MODEL']
 repoName = os.environ['REPOSITORY_NAME']
