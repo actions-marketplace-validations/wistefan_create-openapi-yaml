@@ -21,7 +21,7 @@ inputs:
     default: "swagger.yaml"
 runs:
   using: 'docker'
-  image: 'docker/Dockerfile'
+  image: 'Dockerfile'
   args:
     - ARG_DATA_MODEL=${{ inputs.model-name }}
     - ARG_REPOSITORY_NAME=${{ inputs.repository-name }}
