@@ -17,6 +17,8 @@ outputFile = os.environ['MODEL_FOLDER'] + "/" + os.environ['OUTPUT_FILENAME']
 dataModel = os.environ['DATA_MODEL']
 repoName = os.environ['REPOSITORY_NAME']
 rootModelUrl = os.environ['ROOT_MODEL_URL']
+
+print(dataModel + " " + repoName + " " + rootModelUrl)
 modelDict = read_yaml(modelYaml)
 print(type(modelDict))
 
