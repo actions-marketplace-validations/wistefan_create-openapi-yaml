@@ -19,10 +19,9 @@ inputs:
     description: 'Name of the file to be generated.'
     required: true
     default: "swagger.yaml"
-  incubated:
-    description: 'Set to true, when generating for an incubated model.'
-    default: "false"
-    required: true
+  model-folder:
+    description: 'Should be set if it differs from the model name'
+    required: false
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -32,4 +31,4 @@ runs:
     ROOT_MODEL_URL: ${{ inputs.root-model-url }}
     REPO_FOLDER: /github/workspace
     OUTPUT_FILENAME: ${{ inputs.output-file-name }}
-    INCUBATED: ${{ inputs.incubated }}
+    MODEL_FOLDER: ${{ inputs.model-folder }}

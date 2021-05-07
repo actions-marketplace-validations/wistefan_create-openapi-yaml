@@ -5,7 +5,6 @@ ENV REPOSITORY_NAME="dataModelRepository"
 ENV ROOT_MODEL_URL="https://smart-data-models.github.io"
 ENV REPO_FOLDER="/github/workspace"
 ENV OUTPUT_FILENAME="openapi.yaml"
-ENV INCUBATED="false"
 
 WORKDIR /usr/src/app
 
