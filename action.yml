@@ -23,8 +23,8 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ARG_DATA_MODEL=${{ inputs.model-name }}
-    - ARG_REPOSITORY_NAME=${{ inputs.repository-name }}
-    - ARG_ROOT_MODEL_URL=${{ inputs.root-model-url }}
-    - ARG_REPO_FOLDER=/github/workspace
-    - ARG_OUTPUT_FILENAME=${{ inputs.output-file-name }}
+    - ${{ inputs.model-name }}
+    - ${{ inputs.repository-name }}
+    - ${{ inputs.root-model-url }}
+    - /github/workspace
+    - ${{ inputs.output-file-name }}
