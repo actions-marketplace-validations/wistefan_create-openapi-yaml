@@ -1,0 +1,26 @@
+name: 'Create openapi yaml'
+description: 'Generate the openapi spec for the given data-model.'
+inputs:
+  model-name: 
+    description: 'Name of the model to be generated. Should be the folder that holds the model.yaml'
+    required: true
+  repository-name:  
+    description: 'Name of the repository containing the model.'
+    required: true
+  root-model-url:
+    description: 'Url of the root model.'
+    required: true
+    default: "https://smart-data-models.github.io"
+  output-file-name:
+    description: 'Name of the file to be generated.'
+    required: true
+    default: "swagger.yaml"
+runs:
+  using: 'docker'
+  image: 'docker/Dockerfile'
+  args:
+    - ARG_DATA_MODEL=${{ inputs.model-name }}
+    - ARG_REPOSITORY_NAME=${{ inputs.repository-name }}
+    - ARG_ROOT_MODEL_URL=${{ inputs.root-model-url }}
+    - ARG_REPO_FOLDER=/github/workspace
+    - ARG_OUTPUT_FILENAME=${{ inputs.output-file-name }}
