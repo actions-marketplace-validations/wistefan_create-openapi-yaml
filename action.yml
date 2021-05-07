@@ -1,5 +1,6 @@
 name: 'Create openapi yaml'
 description: 'Generate the openapi spec for the given data-model.'
+icon: book-open
 inputs:
   model-name: 
     description: 'Name of the model to be generated. Should be the folder that holds the model.yaml'
