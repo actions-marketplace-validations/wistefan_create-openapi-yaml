@@ -11,13 +11,17 @@ def read_yaml(fileUrl):
     return yaml.safe_load(file.read())
 
 dataModel = os.environ['DATA_MODEL']
+if(os.environ['INCUBATED'] == true) {
+    dataModelFolder = dataModel + "_incubated"
+} else {
+    dataModelFolder = dataModel
+}
 repoName = os.environ['REPOSITORY_NAME']
 rootModelUrl = os.environ['ROOT_MODEL_URL']
 
-modelFolder=os.environ['REPO_FOLDER'] + "/" + dataModel
+modelFolder=os.environ['REPO_FOLDER'] + "/" + dataModelFolder
 modelYaml = modelFolder + "/model.yaml"
 outputFile = modelFolder + "/" + os.environ['OUTPUT_FILENAME']
-
 
 
 print(dataModel + " " + repoName + " " + rootModelUrl)
