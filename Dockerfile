@@ -12,11 +12,10 @@ ENV ROOT_MODEL_URL=${ARG_ROOT_MODEL_URL}
 ENV MODEL_FOLDER=${ARG_REPO_FOLDER}/${ARG_DATA_MODEL}
 ENV OUTPUT_FILENAME=${ARG_OUTPUT_FILENAME}
 
-WORKDIR /usr/src/app
+WORKDIR ${ARG_REPO_FOLDER}
 
 COPY . .
 
-RUN mkdir model-folder/
 RUN pip install --no-cache-dir -r requirements.txt
 
 CMD ["build-yaml.py"]
