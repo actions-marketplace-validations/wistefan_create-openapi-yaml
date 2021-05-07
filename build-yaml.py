@@ -13,7 +13,7 @@ def read_yaml(fileUrl):
 dataModel = os.environ['DATA_MODEL']
 if not os.environ['MODEL_FOLDER']:
     dataModelFolder = dataModel
-else 
+else :
     dataModelFolder = os.environ['MODEL_FOLDER']
 
 repoName = os.environ['REPOSITORY_NAME']
