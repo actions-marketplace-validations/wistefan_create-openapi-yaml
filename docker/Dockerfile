@@ -16,6 +16,9 @@ WORKDIR /usr/src/app
 
 COPY . .
 
+RUN ls
+RUN ls docker/
+
 RUN mkdir model-folder/
 RUN pip install --no-cache-dir -r docker/requirements.txt
 
