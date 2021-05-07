@@ -22,6 +22,10 @@ The action will create the yaml-file inside github-workspace folder for further 
 
 **Required** Name of the file to be generated. Default `"swagger.yaml"`.
 
+### `model-folder`
+
+**Optional** Should be set if the folder containing the mode differs from the model name.
+
 
 ## Example usage
 
