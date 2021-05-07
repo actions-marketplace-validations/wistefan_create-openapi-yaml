@@ -7,7 +7,7 @@ ENV REPO_FOLDER="/github/workspace"
 ENV MODEL_FOLDER=${REPO_FOLDER}/${DATA_MODEL}
 ENV OUTPUT_FILENAME="openapi.yaml"
 
-WORKDIR /usr/src/app
+WORKDIR ${REPO_FOLDER}
 
 COPY . .
 
