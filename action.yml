@@ -1,6 +1,9 @@
 name: 'Create openapi yaml'
 description: 'Generate the openapi spec for the given data-model.'
-icon: book-open
+author: stefan.wiedemann@fiware.org
+branding:
+  icon: 'book-open'  
+  color: 'yellow'
 inputs:
   model-name: 
     description: 'Name of the model to be generated. Should be the folder that holds the model.yaml'
