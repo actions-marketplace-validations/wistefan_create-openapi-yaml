@@ -7,14 +7,11 @@ ENV REPO_FOLDER="/github/workspace"
 ENV MODEL_FOLDER=${REPO_FOLDER}/${DATA_MODEL}
 ENV OUTPUT_FILENAME="openapi.yaml"
 
-WORKDIR ${REPO_FOLDER}
+WORKDIR /usr/src/app
 
 COPY . .
 
 RUN pip install --no-cache-dir -r requirements.txt
-RUN chmod +rwx build-yaml.py
-
-RUN ls -l
 
 CMD ["build-yaml.py"]
 
