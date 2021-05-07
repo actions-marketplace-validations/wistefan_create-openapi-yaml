@@ -12,8 +12,9 @@ WORKDIR ${REPO_FOLDER}
 COPY . .
 
 RUN pip install --no-cache-dir -r requirements.txt
+RUN chmod +rwx build-yaml.py
 
-RUN ls
+RUN ls -l
 
 CMD ["build-yaml.py"]
 
