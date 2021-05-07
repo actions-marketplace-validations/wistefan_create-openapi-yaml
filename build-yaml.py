@@ -11,7 +11,7 @@ def read_yaml(fileUrl):
     return yaml.safe_load(file.read())
 
 dataModel = os.environ['DATA_MODEL']
-if not os.environ['MODEL_FOLDER']
+if not os.environ['MODEL_FOLDER']:
     dataModelFolder = dataModel
 else 
     dataModelFolder = os.environ['MODEL_FOLDER']
